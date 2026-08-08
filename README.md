@@ -13,9 +13,7 @@ Weekly CEO updates every Sunday.
 Building a research agent with:
 - Web search (Tavily), internal knowledge base search (Supabase), and a calculator, all built as tool() + Zod
 - Session memory (Supabase backed, auto summarizing across turns)
-- Empirically tested agent loop limits before shipping (confirmed an uncapped agent can run away, logged the actual failure, then capped it)
-
-**Deviation from spec:** the roadmap references AgentExecutor/DynamicTool (deprecated in langchain@1.5.5). Using the current createAgent() + tool()+Zod API instead. Same underlying pattern, modern implementation.
+- Tested what happens if the agent loop has no limit (it kept going without stopping), then added a safe cap based on that result
 
 ## Repo structure
 Each week's shipped project lives in its own repo (ai-automation-week1, ai-automation-week2, and so on).
