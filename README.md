@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Automation Learning — Progress
 
-## Getting Started
+10-week roadmap: LangChain, then LangGraph/RAG, then self-hosted n8n, then CRM integrations.
+Weekly CEO updates every Sunday.
 
-First, run the development server:
+## Status: Week 2 of 10 (Phase 1, LangChain Foundations)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Week 1, done — LCEL Pipelines
+**Project:** [Job Application Intelligence Pipeline](https://week-1-project-job-application-inte.vercel.app/)
+4-chain pipeline (job parser, resume parser, parallel matcher, cover letter generator), structured output with Zod, streaming, full UI, deployed to Vercel.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Week 2, in progress — Agents, Tools & Memory
+Building a research agent with:
+- Web search (Tavily), internal knowledge base search (Supabase), and a calculator, all built as tool() + Zod
+- Session memory (Supabase backed, auto summarizing across turns)
+- Empirically tested agent loop limits before shipping (confirmed an uncapped agent can run away, logged the actual failure, then capped it)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Deviation from spec:** the roadmap references AgentExecutor/DynamicTool (deprecated in langchain@1.5.5). Using the current createAgent() + tool()+Zod API instead. Same underlying pattern, modern implementation.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Repo structure
+Each week's shipped project lives in its own repo (ai-automation-week1, ai-automation-week2, and so on).
+This repo (ai-automation-practice) holds exercises, scratch work, and test routes. Not deployed, reference only.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Roadmap
+| Phase | Weeks | Focus |
+|---|---|---|
+| 1 | 1 to 2 | LangChain, chains, tools, agents |
+| 2 | 3 to 4 | RAG, LangGraph, multi-agent |
+| 3 | 5 to 6 | Self-hosted n8n, CI/CD |
+| 4 | 7 to 8 | HubSpot and Zoho CRM automation |
+| 5 | 9 to 10 | Observability, capstone |
