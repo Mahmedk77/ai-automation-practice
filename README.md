@@ -1,15 +1,12 @@
-# AI Automation Learning — Progress
-
-10-week roadmap: LangChain, then LangGraph/RAG, then self-hosted n8n, then CRM integrations.
-Weekly CEO updates every Sunday.
+# AI Automation Learning (Progress)
 
 ## Status: Week 2 of 10 (Phase 1, LangChain Foundations)
 
-### Week 1, done — LCEL Pipelines
+### Week 1, done: LCEL Pipelines
 **Project:** [Job Application Intelligence Pipeline](https://week-1-project-job-application-pipeline.vercel.app/)
 4-chain pipeline (job parser, resume parser, parallel matcher, cover letter generator), structured output with Zod, streaming, full UI, deployed to Vercel.
 
-### Week 2, in progress — Agents, Tools & Memory
+### Week 2, in progress: Agents, Tools & Memory
 Building a research agent with:
 - Web search (Tavily), internal knowledge base search (Supabase), and a calculator, all built as tool() + Zod
 - Session memory (Supabase backed, auto summarizing across turns)
