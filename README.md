@@ -6,7 +6,7 @@ Weekly CEO updates every Sunday.
 ## Status: Week 2 of 10 (Phase 1, LangChain Foundations)
 
 ### Week 1, done — LCEL Pipelines
-**Project:** [Job Application Intelligence Pipeline](https://week-1-project-job-application-inte.vercel.app/)
+**Project:** [Job Application Intelligence Pipeline])(https://week-1-project-job-application-pipeline.vercel.app/)
 4-chain pipeline (job parser, resume parser, parallel matcher, cover letter generator), structured output with Zod, streaming, full UI, deployed to Vercel.
 
 ### Week 2, in progress — Agents, Tools & Memory
